@@ -16,7 +16,7 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 
 const ProductScreen = ({ history, match }) => {
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   const productDetails = useSelector((state) => state.productDetails);
   const dispatch = useDispatch();
 
@@ -90,7 +90,7 @@ const ProductScreen = ({ history, match }) => {
               {product.countInStock > 0 && (
                 <ListGroup.Item>
                   <Row>
-                    <Col></Col>
+                    <Col>Qty</Col>
                     <Col>
                       <Form.Control
                         as="select"
