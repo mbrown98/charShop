@@ -21,7 +21,7 @@ const LoginScreen = ({ location, history }) => {
 
   useEffect(() => {
     if (userInfo) {
-      history.pushState(redirect);
+      history.push(redirect);
     }
   }, [history, userInfo, redirect]);
   const submitHandler = (e) => {
