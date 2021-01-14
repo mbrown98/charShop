@@ -45,8 +45,7 @@ const ProductScreen = ({ history, match }) => {
             <Image
               src={product.image}
               alt={product.name}
-              fluid
-              // style={{ maxHeight: "100%" }}
+              // style={{ height: "80%", width: "80%", margin: "auto" }}
             />
           </Col>
           <Col md={3}>
