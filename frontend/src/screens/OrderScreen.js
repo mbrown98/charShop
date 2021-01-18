@@ -9,7 +9,7 @@ import Loader from "../components/Loader";
 
 // import { savePaymentMethod } from "../actions/cartActions";
 import CheckoutSteps from "../components/CheckoutSteps";
-import { getOrderDetails, payOrder } from "../actions/orderAction";
+import { getOrderDetails, payOrder } from "../actions/orderActions";
 import { ORDER_PAY_RESET } from "../constants/orderConstants";
 
 const OrderScreen = ({ match }) => {

@@ -7,7 +7,7 @@ import Loader from "../components/Loader";
 
 // import { savePaymentMethod } from "../actions/cartActions";
 import CheckoutSteps from "../components/CheckoutSteps";
-import { createOrder } from "../actions/orderAction";
+import { createOrder } from "../actions/orderActions";
 
 const PlaceOrderScreen = ({ history }) => {
   const dispatch = useDispatch();
