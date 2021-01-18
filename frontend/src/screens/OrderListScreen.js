@@ -10,7 +10,10 @@ const OrderListScreen = ({ history }) => {
   const dispatch = useDispatch();
 
   const orderList = useSelector((state) => state.orderList);
-  const { loading, error, orders } = orderList;
+  let { loading, error, orders } = orderList;
+  if (orders) {
+    orders = orders.reverse();
+  }
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
