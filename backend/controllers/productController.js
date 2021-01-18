@@ -105,10 +105,24 @@ const updateProduct = asyncHandler(async (req, res) => {
   }
 });
 
+// @desc  Get Top Products
+// @route  GET /api/products/top
+// @access  PUBLIC
+const getTopProducts = asyncHandler(async (req, res) => {
+  const products = await Product.find({}).sort({ rating: -1 }).limit(3);
+  if (products) {
+    res.json(products);
+  } else {
+    res.status(404);
+    throw new Error("Product not found");
+  }
+});
+
 export {
   getProductById,
   getProducts,
   deleteProduct,
   createProduct,
   updateProduct,
+  getTopProducts,
 };
