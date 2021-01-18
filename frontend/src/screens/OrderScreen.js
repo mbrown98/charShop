@@ -8,7 +8,7 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 
 // import { savePaymentMethod } from "../actions/cartActions";
-import CheckoutSteps from "../components/CheckoutSteps";
+// import CheckoutSteps from "../components/CheckoutSteps";
 import {
   getOrderDetails,
   payOrder,
@@ -76,7 +76,7 @@ const OrderScreen = ({ history, match }) => {
         setSdkReady(true);
       }
     }
-  }, [dispatch, orderId, successPay, order, successDeliver]);
+  }, [dispatch, orderId, successPay, order, successDeliver, userInfo, history]);
 
   const successPaymentHandler = (paymentResult) => {
     dispatch(payOrder(orderId, paymentResult));

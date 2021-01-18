@@ -12,7 +12,7 @@ const UserEditScreen = ({ match, history }) => {
   const userId = match.params.id;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [password, setPassword] = useState("");
   const [isAdmin, setIsAdmin] = useState(false);
 
   const dispatch = useDispatch();
